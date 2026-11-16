@@ -7,6 +7,8 @@
 <meta name="description" content="REF CLIPS : l’app d’analyse vidéo pour les arbitres de basket. Marque tes décisions en quelques touches, coupe des clips exacts, dessine sur l’image et crée ton rapport PDF. Mac et Windows.">
 <meta name="theme-color" content="#060D1F">
 <link rel="canonical" href="https://clips.referee-tracker.fr/">
+<link rel="alternate" hreflang="fr" href="https://clips.referee-tracker.fr/">
+<link rel="alternate" hreflang="en" href="https://clips.referee-tracker.fr/en/">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/icon-256.png">
 <meta property="og:type" content="website">
@@ -18,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="fonts/montserrat-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=7">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"REF CLIPS","operatingSystem":"macOS 12+, Windows 10+","applicationCategory":"SportsApplication",
  "description":"Application d’analyse vidéo pour les arbitres de basket : marquage des décisions, clips, dessin sur l’image, rapport PDF.",
@@ -31,7 +33,9 @@
 <header class="top">
   <a class="brand" href="#"><img src="img/badge.svg" alt="" width="32" height="32"><span>REF<b>CLIPS</b></span></a>
   <nav class="nav" aria-label="Menu"><a href="#marquer">Marquer</a><a href="#exporter">Exporter</a><a href="#installer">Installer</a><a href="#questions">Questions</a></nav>
+  <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
   <a class="btn-top" href="#telecharger">Télécharger</a>
+  <div class="page-tl" aria-hidden="true"></div>
 </header>
 
 <main id="contenu">
@@ -78,6 +82,12 @@
   <div class="pitch">
     <h1>Revois ton match comme un replay.</h1>
     <p class="lead">Tu tapes un code au bon moment, REF CLIPS coupe le clip, le range et prépare ton rapport. L’app d’analyse vidéo pensée pour les arbitres de basket.</p>
+    <form class="demo" autocomplete="off" onsubmit="return false">
+      <label for="demoIn">Essaie : tape le début d’un code, puis Entrée</label>
+      <div class="d-field"><input id="demoIn" placeholder="mar, pou, cha, temps…" maxlength="24" role="combobox" aria-controls="demoSugg" aria-autocomplete="list"><kbd>Entrée</kbd></div>
+      <ul class="d-sugg" id="demoSugg" role="listbox" hidden></ul>
+      <p class="d-said" id="demoSaid" aria-live="polite"></p>
+    </form>
     <div class="cta" id="telecharger">
       <a class="btn" data-dl="auto" href="#installer"><span data-os-label>Télécharger REF CLIPS</span><small data-os-sub>Mac et Windows · gratuit en accès anticipé</small></a>
       <p class="cta-alt">Aussi pour <a data-dl="mac" href="#installer">Mac</a> et <a data-dl="win" href="#installer">Windows</a>. Connexion avec ton <a href="https://www.referee-tracker.fr/" rel="noopener">compte Referee Tracker</a>.</p>
@@ -99,7 +109,7 @@
 </section>
 
 <!-- Marquer -->
-<section id="marquer" class="band">
+<section id="marquer" class="band" data-mk="viol">
   <div class="split">
     <div class="copy">
       <h2>Tu tapes « mar ». C’est noté.</h2>
@@ -124,7 +134,7 @@
 </section>
 
 <!-- Dessiner + 2 écrans + lien : les autres gestes, sans cartes -->
-<section class="band alt">
+<section class="band alt" data-mk="meca">
   <div class="rows">
     <article class="row">
       <h3>Dessine sur l’image</h3>
@@ -142,7 +152,7 @@
 </section>
 
 <!-- Exporter : le résultat concret -->
-<section id="exporter" class="band">
+<section id="exporter" class="band" data-mk="faute">
   <div class="split rev">
     <div class="copy">
       <h2>Un clic, et tout est rangé.</h2>
@@ -170,7 +180,7 @@
 </section>
 
 <!-- Les 3 étapes : une vraie séquence -->
-<section class="band alt">
+<section class="band alt" data-mk="gest">
   <h2 class="center">Trois étapes, pas une de plus.</h2>
   <ol class="steps">
     <li><b>Choisis le match</b><span>Connecte-toi avec ton compte Referee Tracker : tes matchs sont déjà là. Ajoute la vidéo.</span></li>
@@ -184,7 +194,7 @@
 </section>
 
 <!-- Installer -->
-<section id="installer" class="band">
+<section id="installer" class="band" data-mk="viol">
   <h2 class="center">Installer en deux minutes</h2>
   <p class="center intro">REF CLIPS est en accès anticipé : la première fois, ton ordinateur peut afficher un message de sécurité. Voici quoi faire.</p>
   <div class="os-tabs" role="tablist"><button role="tab" data-os="mac" class="on">Mac</button><button role="tab" data-os="win">Windows</button></div>
@@ -209,7 +219,7 @@
 </section>
 
 <!-- Questions -->
-<section id="questions" class="band alt">
+<section id="questions" class="band alt" data-mk="faute">
   <h2 class="center">Questions fréquentes</h2>
   <div class="faq">
     <details><summary>C’est gratuit ?</summary><p>Oui, pendant l’accès anticipé, pour tous les arbitres qui ont un compte Referee Tracker.</p></details>
@@ -227,6 +237,6 @@
   <nav aria-label="Liens"><a href="https://www.referee-tracker.fr/" rel="noopener">Referee Tracker</a><a href="https://app.referee-tracker.fr/confidentialite.html" rel="noopener">Confidentialité</a><a href="https://app.referee-tracker.fr/mentions-legales.html" rel="noopener">Mentions légales</a></nav>
   <p>Un projet d’arbitres, pour les arbitres.</p>
 </footer>
-<script src="site.js?v=2"></script>
+<script src="site.js?v=4"></script>
 </body>
 </html>
