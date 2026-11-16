@@ -4,239 +4,147 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>REF CLIPS — l’analyse vidéo des arbitres de basket</title>
-<meta name="description" content="REF CLIPS : l’app d’analyse vidéo pour les arbitres de basket. Marque tes décisions en quelques touches, coupe des clips exacts, dessine sur l’image et crée ton rapport PDF. Mac et Windows.">
+<meta name="description" content="REF CLIPS : l’app d’analyse vidéo pour les arbitres de basket. Marque tes décisions en une touche, coupe des clips exacts, dessine sur l’image et crée ton rapport PDF. Mac et Windows.">
 <meta name="theme-color" content="#060D1F">
 <link rel="canonical" href="https://clips.referee-tracker.fr/">
 <link rel="alternate" hreflang="fr" href="https://clips.referee-tracker.fr/">
 <link rel="alternate" hreflang="en" href="https://clips.referee-tracker.fr/en/">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/icon-256.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="REF CLIPS — l’analyse vidéo des arbitres de basket">
-<meta property="og:description" content="Revois ton match comme un replay : marque tes décisions, coupe des clips, dessine sur l’image, crée ton rapport. Mac et Windows.">
-<meta property="og:url" content="https://clips.referee-tracker.fr/">
-<meta property="og:image" content="https://clips.referee-tracker.fr/img/og.jpg">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website"><meta property="og:title" content="REF CLIPS — l’analyse vidéo des arbitres de basket"><meta property="og:description" content="REF CLIPS : l’app d’analyse vidéo pour les arbitres de basket. Marque tes décisions en une touche, coupe des clips exacts, dessine sur l’image et crée ton rapport PDF. Mac et Windows.">
+<meta property="og:url" content="https://clips.referee-tracker.fr/"><meta property="og:image" content="https://clips.referee-tracker.fr/img/og.jpg"><meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="fonts/montserrat-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="site.css?v=7">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"REF CLIPS","operatingSystem":"macOS 12+, Windows 10+","applicationCategory":"SportsApplication",
- "description":"Application d’analyse vidéo pour les arbitres de basket : marquage des décisions, clips, dessin sur l’image, rapport PDF.",
- "url":"https://clips.referee-tracker.fr/","publisher":{"@type":"Organization","name":"Referee Tracker","url":"https://www.referee-tracker.fr/"}}
-</script>
+<link rel="stylesheet" href="rt.css?v=b104b">
+<link rel="stylesheet" href="site.css?v=14">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "REF CLIPS", "operatingSystem": "macOS 12+, Windows 10+", "applicationCategory": "SportsApplication", "description": "REF CLIPS : l’app d’analyse vidéo pour les arbitres de basket. Marque tes décisions en une touche, coupe des clips exacts, dessine sur l’image et crée ton rapport PDF. Mac et Windows.", "url": "https://clips.referee-tracker.fr/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "Referee Tracker", "url": "https://www.referee-tracker.fr/"}}</script>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 
 <header class="top">
-  <a class="brand" href="#"><img src="img/badge.svg" alt="" width="32" height="32"><span>REF<b>CLIPS</b></span></a>
-  <nav class="nav" aria-label="Menu"><a href="#marquer">Marquer</a><a href="#exporter">Exporter</a><a href="#installer">Installer</a><a href="#questions">Questions</a></nav>
-  <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
-  <a class="btn-top" href="#telecharger">Télécharger</a>
-  <div class="page-tl" aria-hidden="true"></div>
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="REF CLIPS"><img src="img/badge.svg" alt="" width="38" height="38">REF <b>CLIPS</b></a>
+    <nav class="nav" aria-label="Menu">
+      <a class="l" href="#visite">L’app</a><a class="l" href="#essai">Essaie</a><a class="l" href="#fonctions">Fonctions</a><a class="l" href="#installer">Installer</a><a class="l" href="#faq">FAQ</a>
+      <a class="btn btn-ghost btn-sm lang" href="en/" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-gold btn-sm" href="#installer">Télécharger</a>
+    </nav>
+  </div>
 </header>
 
 <main id="contenu">
-
-<!-- Le replay : terrain vu par la caméra, dessin d'arbitre, bandeau télé, barre de temps du match -->
-<section class="replay" aria-label="REF CLIPS en un coup d’œil">
-  <div class="stage" aria-hidden="true">
-    <div class="cam">
-      <svg class="court" viewBox="0 0 940 500">
-        <defs>
-          <linearGradient id="wood" x1="0" x2="1"><stop offset="0" stop-color="#B9773C"/><stop offset=".5" stop-color="#D69A5C"/><stop offset="1" stop-color="#B9773C"/></linearGradient>
-          <pattern id="planks" width="940" height="22" patternUnits="userSpaceOnUse"><rect width="940" height="22" fill="url(#wood)"/><line x1="0" y1="21.5" x2="940" y2="21.5" stroke="#8E5726" stroke-opacity=".35"/></pattern>
-        </defs>
-        <rect width="940" height="500" fill="url(#planks)"/>
-        <g fill="none" stroke="#fff" stroke-width="5" stroke-opacity=".92">
-          <rect x="20" y="20" width="900" height="460"/><line x1="470" y1="20" x2="470" y2="480"/><circle cx="470" cy="250" r="60"/>
-          <path d="M920 30 h-140 a 220 220 0 0 0 0 440 h140"/><rect x="730" y="170" width="190" height="160" fill="#0A3D8F" fill-opacity=".7"/><circle cx="730" cy="250" r="60"/>
-          <path d="M20 30 h140 a 220 220 0 0 1 0 440 h-140"/><rect x="20" y="170" width="190" height="160" fill="#0A3D8F" fill-opacity=".7"/>
-          <path d="M880 210 a 40 40 0 0 0 0 80"/>
-        </g>
-        <circle cx="886" cy="250" r="9" fill="none" stroke="#E4002B" stroke-width="5"/>
-        <g class="pl"><circle cx="640" cy="210" r="15" fill="#E4002B"/><circle cx="690" cy="300" r="15" fill="#F3F5FA"/><circle cx="600" cy="320" r="15" fill="#E4002B"/>
-          <circle cx="770" cy="200" r="15" fill="#F3F5FA"/><circle cx="560" cy="160" r="15" fill="#F3F5FA"/><circle cx="800" cy="330" r="15" fill="#E4002B"/>
-          <circle cx="520" cy="270" r="15" fill="#F3F5FA"/><circle cx="700" cy="140" r="15" fill="#E4002B"/></g>
-        <g class="tele-floor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path class="t-arrow" d="M470 360 C 520 330, 570 290, 612 240"/>
-          <path class="t-head" d="M624 226 l-30 10 l14 22 z"/>
-          <circle class="t-ring" cx="640" cy="210" r="42"/>
-        </g>
-      </svg>
+<section class="hero" aria-labelledby="h1">
+  <div class="grille" aria-hidden="true"></div>
+  <div class="wrap hero-g">
+    <div>
+      <span class="pill rv"><i aria-hidden="true"></i>Accès anticipé · gratuit</span>
+      <h1 id="h1" class="rv d1">L’analyse vidéo des <span class="grad">arbitres de basket.</span></h1>
+      <p class="lead rv d2"><strong style="color:#fff">Tu tapes un code, le clip est prêt.</strong> REF CLIPS coupe tes actions de match, les range par thème et prépare ton rapport PDF. Dessine sur l’image, revois chaque décision en grand : ton match devient une vraie séance vidéo.</p>
+      <div class="cta rv d3">
+        <a class="btn btn-gold" data-dl="auto" href="#installer"><span data-os-label>Télécharger REF CLIPS</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#visite">Voir l’app en action</a>
+      </div>
+      <ul class="proof rv d3"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Gratuit</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Mac et Windows</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Tes vidéos restent chez toi</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Conçu par un arbitre</li></ul>
     </div>
-    <!-- Dessin de l'arbitre (en surimpression, comme à la télé) -->
-    <svg class="tele" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice">
-      <text class="t-word" x="590" y="170">Marcher</text>
-    </svg>
-    <div class="lower">
-      <span class="lt-code">V-MAR</span>
-      <span class="lt-name">Marcher</span>
-      <span class="lt-time">QT3 · 31:42</span>
-      <span class="lt-freeze">Image figée 3 s</span>
-    </div>
-  </div>
-
-  <div class="pitch">
-    <h1>Revois ton match comme un replay.</h1>
-    <p class="lead">Tu tapes un code au bon moment, REF CLIPS coupe le clip, le range et prépare ton rapport. L’app d’analyse vidéo pensée pour les arbitres de basket.</p>
-    <form class="demo" autocomplete="off" onsubmit="return false">
-      <label for="demoIn">Essaie : tape le début d’un code, puis Entrée</label>
-      <div class="d-field"><input id="demoIn" placeholder="mar, pou, cha, temps…" maxlength="24" role="combobox" aria-controls="demoSugg" aria-autocomplete="list"><kbd>Entrée</kbd></div>
-      <ul class="d-sugg" id="demoSugg" role="listbox" hidden></ul>
-      <p class="d-said" id="demoSaid" aria-live="polite"></p>
-    </form>
-    <div class="cta" id="telecharger">
-      <a class="btn" data-dl="auto" href="#installer"><span data-os-label>Télécharger REF CLIPS</span><small data-os-sub>Mac et Windows · gratuit en accès anticipé</small></a>
-      <p class="cta-alt">Aussi pour <a data-dl="mac" href="#installer">Mac</a> et <a data-dl="win" href="#installer">Windows</a>. Connexion avec ton <a href="https://www.referee-tracker.fr/" rel="noopener">compte Referee Tracker</a>.</p>
-    </div>
-  </div>
-
-  <!-- La barre de temps du match : les repères sont des clips -->
-  <div class="timeline" aria-hidden="true">
-    <div class="tl-qt"><span>QT1</span><span>QT2</span><span>QT3</span><span>QT4</span></div>
-    <div class="tl-bar">
-      <i style="left:4%;--c:var(--viol)"></i><i style="left:9%;--c:var(--faute)"></i><i style="left:13%;--c:var(--meca)"></i><i style="left:19%;--c:var(--faute)"></i>
-      <i style="left:24%;--c:var(--gest)"></i><i style="left:29%;--c:var(--viol)"></i><i style="left:33%;--c:var(--faute)"></i><i style="left:38%;--c:var(--faute)"></i>
-      <i style="left:44%;--c:var(--meca)"></i><i style="left:49%;--c:var(--viol)"></i><i style="left:55%;--c:var(--faute)"></i><i class="now" style="left:61%;--c:var(--viol)"></i>
-      <i style="left:66%;--c:var(--gest)"></i><i style="left:71%;--c:var(--faute)"></i><i style="left:77%;--c:var(--meca)"></i><i style="left:83%;--c:var(--faute)"></i>
-      <i style="left:88%;--c:var(--viol)"></i><i style="left:93%;--c:var(--faute)"></i>
-      <b style="width:61%"></b>
+    <div class="rv d2">
+      <div class="scene laptop">
+        <div class="pc"><div class="cadre" id="heroEcran"><img class="on" src="img/app/accueil.webp" width="1920" height="1018" alt="REF CLIPS : la vidéo du match, les 4 thèmes et la liste des clips"><img loading="lazy" data-src="img/app/dessin.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="Un clip revu en grand avec le dessin de l’arbitre"><img loading="lazy" data-src="img/app/codes.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="Les codes du thème Fautes"><img loading="lazy" data-src="img/app/export.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="L’export : qualité et dossier"><div class="reflet" aria-hidden="true"></div></div><div class="pied" aria-hidden="true"></div></div>
+        <div class="toast t1" aria-hidden="true"><div class="ic">✂</div><div><b>Clip créé</b><span>V-MAR (4) · QT3 · 31:42</span></div></div><div class="toast t2" aria-hidden="true"><div class="ic">⬇</div><div><b>Export terminé</b><span>64 clips rangés par thème</span></div></div><div class="toast t3" aria-hidden="true"><div class="ic">▤</div><div><b>Rapport PDF prêt</b><span>NM2 BCNA – AULNOYE</span></div></div>
+      </div>
+      <div class="points"><button class="on" aria-label="REF CLIPS : la vidéo du match, les 4 thèmes et la liste des clips"></button><button aria-label="Un clip revu en grand avec le dessin de l’arbitre"></button><button aria-label="Les codes du thème Fautes"></button><button aria-label="L’export : qualité et dossier"></button></div>
     </div>
   </div>
 </section>
 
-<!-- Marquer -->
-<section id="marquer" class="band" data-mk="viol">
-  <div class="split">
-    <div class="copy">
-      <h2>Tu tapes « mar ». C’est noté.</h2>
-      <p>Pendant la lecture, tape le début d’un code : REF CLIPS propose le bon tout de suite. Entrée, et le clip est créé autour de l’action, avec le bon quart-temps.</p>
-      <ul class="facts">
-        <li><b>83 codes</b> rangés en 4 thèmes : violations, fautes, mécanique, gestion.</li>
-        <li><b>9 favoris</b> sur les touches 1 à 9 pour les codes qui reviennent.</li>
-        <li><b>Préfixes</b> pour l’oubli, l’invention ou le no call, et <b>BEST</b> pour tes plus belles actions.</li>
-        <li><b>Arbitre concerné</b> sur chaque clip quand vous êtes 2 ou 3.</li>
-      </ul>
+<div class="defile" aria-hidden="true"><ul><li>Marquage en une touche</li><li>83 codes en 4 thèmes</li><li>Dessin sur l’image</li><li>Clips exacts jusqu’à la 4K</li><li>Rapport PDF</li><li>Mode 2 écrans</li><li>Vidéo par lien</li><li>Favoris sur 1 à 9</li><li>BEST de la saison</li><li>Mac et Windows</li><li>Marquage en une touche</li><li>83 codes en 4 thèmes</li><li>Dessin sur l’image</li><li>Clips exacts jusqu’à la 4K</li><li>Rapport PDF</li><li>Mode 2 écrans</li><li>Vidéo par lien</li><li>Favoris sur 1 à 9</li><li>BEST de la saison</li><li>Mac et Windows</li></ul></div>
+
+<section aria-label="REF CLIPS" style="padding:80px 0">
+  <div class="wrap chiffres"><div class="chiffre rv"><strong data-to="1">0<small> touche</small></strong><span>pour créer un clip pendant la lecture, rangé au bon quart-temps</span></div><div class="chiffre rv d1"><strong data-to="83">0<small> codes</small></strong><span>violations, fautes, mécanique, gestion : tout le jargon de l’arbitre</span></div><div class="chiffre rv d2"><strong data-to="3">0<small> s</small></strong><span>d’image figée avec ton dessin, dans le clip exporté</span></div><div class="chiffre rv d3"><strong data-to="4">0<small>K</small></strong><span>la qualité d’origine de ta vidéo, gardée à l’export</span></div></div>
+</section>
+
+<section id="visite" aria-labelledby="h-visite">
+  <div class="wrap visite large">
+    <div>
+      <div class="head rv"><span class="eyebrow">Visite de l’app</span><h2 id="h-visite">Ton match, décision par décision.</h2><p>Les vrais écrans de REF CLIPS (match fictif). Choisis un onglet ou laisse défiler.</p></div>
+      <div class="onglets rv d1" role="tablist"><button class="onglet on" role="tab" aria-selected="true"><h3><em>01</em>Marquer</h3><p>La vidéo, les 4 thèmes et tes clips au fur et à mesure. Chaque clip prend tout seul le bon quart-temps.</p><span class="barre"></span></button><button class="onglet" role="tab" aria-selected="false"><h3><em>02</em>Codes</h3><p>Un thème s’ouvre et la vidéo se met en pause : tu choisis le code, le clip est créé autour de l’action.</p><span class="barre"></span></button><button class="onglet" role="tab" aria-selected="false"><h3><em>03</em>Recherche</h3><p>Tape le début d’un code, « mar » ou « pou » : REF CLIPS propose le bon, Entrée et c’est noté.</p><span class="barre"></span></button><button class="onglet" role="tab" aria-selected="false"><h3><em>04</em>Dessin</h3><p>Flèche, cercle, trait, texte. Dans le clip exporté, l’image se fige 3 secondes avec ton dessin.</p><span class="barre"></span></button><button class="onglet" role="tab" aria-selected="false"><h3><em>05</em>Export</h3><p>Qualité d’origine ou légère pour WhatsApp, dans le dossier de ton choix. Tout est rangé par thème.</p><span class="barre"></span></button><button class="onglet" role="tab" aria-selected="false"><h3><em>06</em>Rapport</h3><p>Un rapport PDF clair à chaque export : décisions par thème et par quart-temps, BEST et notes.</p><span class="barre"></span></button></div>
     </div>
-    <div class="search" aria-hidden="true">
-      <div class="s-field"><span class="s-typed">mar</span><span class="s-caret"></span></div>
-      <ol class="s-list">
-        <li class="on"><em style="--c:var(--viol)"></em><span>Marcher</span><code>V-MAR</code><kbd>Entrée</kbd></li>
-        <li><em style="--c:var(--faute)"></em><span>Démarquage</span><code>F-OFF-DEM</code></li>
-        <li><em style="--c:var(--meca)"></em><span>AT mauvaise position</span><code>M-AT-BAD</code></li>
-      </ol>
-      <div class="s-clip"><em style="--c:var(--viol)"></em><b>V-MAR (4)</b><span>QT3 · 31:42 · 14 s</span></div>
-    </div>
+    <div class="rv d2"><div class="pc"><div class="cadre" id="visiteEcran"><img class="on" loading="lazy" src="img/app/accueil.webp" width="1920" height="1018" alt="Marquer"><img loading="lazy" data-src="img/app/codes.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="Codes"><img loading="lazy" data-src="img/app/recherche.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="Recherche"><img loading="lazy" data-src="img/app/dessin.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="Dessin"><img loading="lazy" data-src="img/app/export.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="Export"><img loading="lazy" data-src="img/app/rapport.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" width="1920" height="1018" alt="Rapport"></div><div class="pied" aria-hidden="true"></div></div></div>
   </div>
 </section>
 
-<!-- Dessiner + 2 écrans + lien : les autres gestes, sans cartes -->
-<section class="band alt" data-mk="meca">
-  <div class="rows">
-    <article class="row">
-      <h3>Dessine sur l’image</h3>
-      <p>Flèche, cercle, trait, texte, en couleurs vives. Dans le clip exporté, l’image se fige 3 secondes avec ton dessin, comme un replay commenté.</p>
-    </article>
-    <article class="row">
-      <h3>Deux écrans</h3>
-      <p>La vidéo en plein écran d’un côté, les codes de l’autre. Avec un seul écran, les codes tiennent dans une petite fenêtre.</p>
-    </article>
-    <article class="row">
-      <h3>Ta vidéo, d’où qu’elle vienne</h3>
-      <p>Fichier de caméra ou de téléphone, même en 4K, en un ou plusieurs morceaux. Ou un lien Google Drive, Dropbox, OneDrive, WeTransfer.</p>
-    </article>
+<section id="comment" aria-labelledby="h-comment">
+  <div class="wrap">
+    <div class="head c rv"><span class="eyebrow">Comment ça marche</span><h2 id="h-comment">Trois étapes. Pas une de plus.</h2><p>Tu gardes tes habitudes : la vidéo du match, ton œil d’arbitre. REF CLIPS fait le découpage et le rangement.</p></div>
+    <div class="etapes"><article class="etape rv"><div class="n">1</div><h3>Tu choisis ton match</h3><p>Connecte-toi avec ton compte Referee Tracker : tes matchs sont déjà là. Ajoute la vidéo, un fichier ou un lien Drive, Dropbox, WeTransfer.</p></article><article class="etape rv d1"><div class="n">2</div><h3>Tu marques tes décisions</h3><p>Pendant la lecture, une touche par action. Corrige un code, ajoute une note, dessine sur l’image. Tout s’enregistre seul.</p></article><article class="etape rv d2"><div class="n">3</div><h3>Tu exportes</h3><p>Un clic : tes clips sont coupés à la seconde, rangés par thème, avec ton rapport PDF prêt à envoyer à ton formateur.</p></article></div>
   </div>
 </section>
 
-<!-- Exporter : le résultat concret -->
-<section id="exporter" class="band" data-mk="faute">
-  <div class="split rev">
-    <div class="copy">
-      <h2>Un clic, et tout est rangé.</h2>
-      <p>Chaque clip est coupé à la seconde près, en qualité d’origine pour analyser ou en version légère pour WhatsApp et Drive. Tes clips arrivent classés par thème, avec un rapport PDF prêt à envoyer à ton formateur.</p>
-    </div>
-    <div class="out" aria-hidden="true">
-      <ul class="tree">
-        <li class="d">SENIOR</li>
-        <li class="d l2">NM2_BCNA_AULNOYE</li>
-        <li class="d l3" style="--c:var(--viol)">VIOLATIONS <i>12</i></li>
-        <li class="f l4">V-MAR (4).mp4</li>
-        <li class="d l3" style="--c:var(--faute)">FAUTES <i>27</i></li>
-        <li class="f l4">OUB-F-OFF-ECR (1).mp4</li>
-        <li class="d l3" style="--c:var(--meca)">MEKA REF <i>15</i></li>
-        <li class="d l3" style="--c:var(--gest)">GESTION <i>10</i></li>
-        <li class="f l3 pdf">Rapport_NM2_BCNA_AULNOYE.pdf</li>
-      </ul>
-      <div class="sheet">
-        <div class="sh-head"><img src="img/badge.svg" alt=""><span>Rapport d’analyse vidéo</span><b>NM2 BCNA – AULNOYE</b></div>
-        <div class="sh-cards"><span style="--c:var(--viol)"><b>12</b>Violations</span><span style="--c:var(--faute)"><b>27</b>Fautes</span><span style="--c:var(--meca)"><b>15</b>Mécanique</span><span style="--c:var(--gest)"><b>10</b>Gestion</span></div>
-        <div class="sh-lines"><i></i><i></i><i class="g"></i><i></i><i></i></div>
+<section id="essai" aria-labelledby="h-essai">
+  <div class="wrap">
+    <div class="head c rv"><span class="eyebrow">Essaie maintenant</span><h2 id="h-essai">Tape un code, regarde le clip se créer.</h2><p>C’est exactement ce qui se passe dans l’app : quelques lettres, Entrée, et le clip est rangé.</p></div>
+    <div class="calc rv">
+      <form class="demo" autocomplete="off" onsubmit="return false">
+        <label for="demoIn">Tape le début d’un code</label>
+        <div class="d-field"><input id="demoIn" placeholder="mar, pou, cha, temps…" maxlength="24" role="combobox" aria-controls="demoSugg" aria-autocomplete="list" aria-expanded="false"><kbd>Entrée</kbd></div>
+        <ul class="d-sugg" id="demoSugg" role="listbox"></ul>
+        <div class="d-tl" aria-hidden="true"><span>QT1</span><span>QT2</span><span>QT3</span><span>QT4</span><div class="d-bar" id="demoBar"><b></b></div></div>
+      </form>
+      <div class="res" aria-live="polite">
+        <div class="ligne"><span>Code</span><b id="rCode">—</b></div><div class="ligne"><span>Thème</span><b id="rTheme">—</b></div><div class="ligne"><span>Quart-temps</span><b id="rQt">—</b></div><div class="ligne"><span>Durée du clip</span><b id="rDur">—</b></div>
+        <div class="ligne net"><span>Fichier créé</span><b id="rFile">—</b></div>
+        <p class="note">Dans l’app, le clip est coupé autour de l’instant où tu as tapé le code. Tu ajustes le début et la fin d’une touche.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Les 3 étapes : une vraie séquence -->
-<section class="band alt" data-mk="gest">
-  <h2 class="center">Trois étapes, pas une de plus.</h2>
-  <ol class="steps">
-    <li><b>Choisis le match</b><span>Connecte-toi avec ton compte Referee Tracker : tes matchs sont déjà là. Ajoute la vidéo.</span></li>
-    <li><b>Marque tes décisions</b><span>Tape les codes pendant la lecture. Corrige, ajoute une note, dessine. Tout s’enregistre seul.</span></li>
-    <li><b>Exporte</b><span>Clips rangés par thème et rapport PDF, dans le dossier de ton choix.</span></li>
-  </ol>
-  <div class="rt">
-    <img src="img/badge.svg" alt="">
-    <p><b>De la famille Referee Tracker.</b> REF CLIPS utilise ton compte <a href="https://www.referee-tracker.fr/" rel="noopener">Referee Tracker</a>, l’app qui suit tes désignations, tes déplacements et tes indemnités : ton nom, ton niveau et tes matchs sont déjà remplis.</p>
+<section id="fonctions" aria-labelledby="h-fonctions">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Fonctions</span><h2 id="h-fonctions">Tout ce qu’il faut pour analyser un match.</h2></div>
+    <div class="cartes"><article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 15h10"/></svg></div><h3>Marquage au clavier</h3><p>Tape le début d’un code ou clique sur un thème. Le clip est créé autour de l’action, au bon quart-temps.</p></article><article class="carte rv d1"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div><h3>Favoris et BEST</h3><p>Tes 9 codes favoris sur les touches 1 à 9. Les plus belles actions en BEST, regroupées à part.</p></article><article class="carte rv d2"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><h3>Dessin sur l’image</h3><p>Flèches, cercles, traits et texte en couleurs vives, figés 3 secondes dans le clip exporté.</p></article><article class="carte rv d3"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div><h3>Clips exacts, jusqu’à la 4K</h3><p>Coupés à la seconde près, en qualité d’origine ou en version légère pour l’envoi.</p></article><article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div><h3>Rapport PDF</h3><p>À chaque export : décisions par thème et par quart-temps, BEST, notes. Prêt pour ton formateur.</p></article><article class="carte rv d1"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="13" height="10" rx="1.5"/><rect x="17" y="7" width="5" height="10" rx="1"/><path d="M6 18h5M8.5 14v4"/></svg></div><h3>Mode 2 écrans</h3><p>La vidéo en plein écran d’un côté, les codes de l’autre. Avec un seul écran, une fenêtre flottante.</p></article><article class="carte rv d2"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div><h3>Vidéo par lien</h3><p>Google Drive, Dropbox, OneDrive, WeTransfer ou lien direct : colle le lien, REF CLIPS télécharge.</p></article><article class="carte rv d3"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><h3>Compte Referee Tracker</h3><p>Ton nom, ton niveau et tes matchs sont déjà là. Aucun formulaire à remplir.</p></article></div>
   </div>
 </section>
 
-<!-- Installer -->
-<section id="installer" class="band" data-mk="viol">
-  <h2 class="center">Installer en deux minutes</h2>
-  <p class="center intro">REF CLIPS est en accès anticipé : la première fois, ton ordinateur peut afficher un message de sécurité. Voici quoi faire.</p>
-  <div class="os-tabs" role="tablist"><button role="tab" data-os="mac" class="on">Mac</button><button role="tab" data-os="win">Windows</button></div>
-  <div class="os-pane" data-pane="mac">
-    <ol class="howto">
-      <li>Télécharge <b>REF CLIPS.dmg</b> et ouvre-le.</li>
-      <li>Glisse l’icône REF CLIPS dans le dossier <b>Applications</b>.</li>
-      <li>Ouvre REF CLIPS. Si le Mac refuse : <b>Réglages Système › Confidentialité et sécurité</b>, descends et clique sur <b>Ouvrir quand même</b>. Une seule fois.</li>
-    </ol>
-    <p class="req">macOS 12 ou plus récent, Mac Intel et Apple.</p>
-    <a class="btn small" data-dl="mac" href="#installer">Télécharger pour Mac</a>
-  </div>
-  <div class="os-pane" data-pane="win" hidden>
-    <ol class="howto">
-      <li>Télécharge <b>REF CLIPS Setup.exe</b> et ouvre-le.</li>
-      <li>Si Windows affiche « Windows a protégé votre ordinateur » : <b>Informations complémentaires</b>, puis <b>Exécuter quand même</b>.</li>
-      <li>L’installation se fait seule. REF CLIPS apparaît sur ton bureau.</li>
-    </ol>
-    <p class="req">Windows 10 et 11, 64 bits.</p>
-    <a class="btn small" data-dl="win" href="#installer">Télécharger pour Windows</a>
+<section id="installer" aria-labelledby="h-installer">
+  <div class="wrap">
+    <div class="head c rv"><span class="eyebrow">Installer</span><h2 id="h-installer">Installé en deux minutes.</h2><p>REF CLIPS est en accès anticipé : la première fois, ton ordinateur peut afficher un message de sécurité. C’est normal, voici quoi faire.</p></div>
+    <div class="pc-tabs rv" role="tablist"><button class="on" data-os="mac" role="tab" aria-selected="true">Mac</button><button data-os="win" role="tab" aria-selected="false">Windows</button></div>
+    <div class="os-pane" data-pane="mac"><div class="etapes"><article class="etape"><div class="n">1</div><h3>Télécharge</h3><p>Le fichier <code>REF CLIPS.dmg</code>, puis ouvre-le.</p></article><article class="etape"><div class="n">2</div><h3>Glisse dans Applications</h3><p>Fais glisser l’icône REF CLIPS dans le dossier Applications.</p></article><article class="etape"><div class="n">3</div><h3>Ouvre REF CLIPS</h3><p>Si le Mac refuse : Réglages Système › Confidentialité et sécurité, puis « Ouvrir quand même ». Une seule fois.</p></article></div><p class="req">macOS 12 ou plus récent · Mac Intel et Apple</p><p class="c"><a class="btn btn-gold" data-dl="mac" href="#installer">Télécharger pour Mac <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></div>
+    <div class="os-pane" data-pane="win" hidden><div class="etapes"><article class="etape"><div class="n">1</div><h3>Télécharge</h3><p>Le fichier <code>REF CLIPS Setup.exe</code>, puis ouvre-le.</p></article><article class="etape"><div class="n">2</div><h3>Passe l’avertissement</h3><p>Si Windows affiche « Windows a protégé votre ordinateur » : « Informations complémentaires », puis « Exécuter quand même ».</p></article><article class="etape"><div class="n">3</div><h3>C’est installé</h3><p>L’installation se fait seule. REF CLIPS apparaît sur ton bureau.</p></article></div><p class="req">Windows 10 et 11 · 64 bits</p><p class="c"><a class="btn btn-gold" data-dl="win" href="#installer">Télécharger pour Windows <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p></div>
   </div>
 </section>
 
-<!-- Questions -->
-<section id="questions" class="band alt" data-mk="faute">
-  <h2 class="center">Questions fréquentes</h2>
-  <div class="faq">
-    <details><summary>C’est gratuit ?</summary><p>Oui, pendant l’accès anticipé, pour tous les arbitres qui ont un compte Referee Tracker.</p></details>
-    <details><summary>Mes vidéos partent-elles sur internet ?</summary><p>Non. Tes vidéos, clips, notes et rapports restent sur ton ordinateur. Si tu l’acceptes, REF CLIPS envoie seulement des statistiques d’utilisation pour s’améliorer. Tout est dans la <a href="https://app.referee-tracker.fr/confidentialite.html" rel="noopener">politique de confidentialité</a>.</p></details>
-    <details><summary>Quelles vidéos marchent ?</summary><p>MP4, MOV, MTS, AVI et les autres formats des caméras et téléphones, jusqu’à la 4K, en un ou plusieurs fichiers. Les liens Google Drive, Dropbox, OneDrive, WeTransfer et les liens directs aussi. YouTube interdit le téléchargement : demande le fichier au club.</p></details>
-    <details><summary>Faut-il internet ?</summary><p>Seulement pour te connecter et pour une vidéo par lien. L’analyse et l’export marchent hors ligne.</p></details>
-    <details><summary>On est trois arbitres sur le match.</summary><p>Choisis « 3 arbitres » dans les réglages : les codes de l’arbitre AC et le triple coup de sifflet apparaissent.</p></details>
-    <details><summary>Un problème, une idée ?</summary><p>Dans REF CLIPS, menu <b>⋯ › Signaler un problème</b> : ton message arrive directement à l’équipe.</p></details>
+<section id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="head c rv"><span class="eyebrow">Questions fréquentes</span><h2 id="h-faq">Ce qu’on nous demande souvent.</h2></div>
+    <div class="faq rv"><details><summary>C’est gratuit ?</summary><p>Oui, pendant l’accès anticipé, pour tous les arbitres qui ont un compte Referee Tracker.</p></details><details><summary>Mes vidéos partent-elles sur internet ?</summary><p>Non. Tes vidéos, clips, notes et rapports restent sur ton ordinateur. Si tu l’acceptes, REF CLIPS envoie seulement des statistiques d’utilisation pour s’améliorer. Détails dans la <a href="https://app.referee-tracker.fr/confidentialite.html">politique de confidentialité</a>.</p></details><details><summary>Quelles vidéos marchent ?</summary><p>MP4, MOV, MTS, AVI et les autres formats des caméras et téléphones, jusqu’à la 4K, en un ou plusieurs fichiers. Les liens Google Drive, Dropbox, OneDrive, WeTransfer et les liens directs aussi. YouTube interdit le téléchargement : demande le fichier au club.</p></details><details><summary>Faut-il internet ?</summary><p>Seulement pour te connecter et pour une vidéo par lien. L’analyse et l’export marchent hors ligne.</p></details><details><summary>On est trois arbitres sur le match.</summary><p>Choisis « 3 arbitres » dans les réglages : les codes de l’arbitre AC et le triple coup de sifflet apparaissent. Tu peux aussi indiquer quel arbitre est concerné par chaque clip.</p></details><details><summary>Un problème, une idée ?</summary><p>Dans REF CLIPS, menu ⋯ › Signaler un problème : ton message arrive directement à l’équipe.</p></details></div>
+  </div>
+</section>
+
+<section aria-label="Accès anticipé" style="padding-top:20px">
+  <div class="wrap">
+    <div class="final rv">
+      <span class="eyebrow">Accès anticipé</span>
+      <h2>Ton prochain match peut devenir ta meilleure séance vidéo.</h2>
+      <p>Télécharge REF CLIPS et connecte-toi avec ton compte Referee Tracker. Pas encore de compte ? Il se crée en deux minutes.</p>
+      <a class="btn btn-gold" data-dl="auto" href="#installer">Télécharger REF CLIPS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="https://www.referee-tracker.fr/inscription.html">Créer mon compte Referee Tracker</a>
+      <div class="places">Gratuit pendant l’accès anticipé · Mac et Windows</div>
+    </div>
   </div>
 </section>
 </main>
 
-<footer class="foot">
-  <a class="brand" href="#"><img src="img/badge.svg" alt="" width="26" height="26"><span>REF<b>CLIPS</b></span></a>
-  <nav aria-label="Liens"><a href="https://www.referee-tracker.fr/" rel="noopener">Referee Tracker</a><a href="https://app.referee-tracker.fr/confidentialite.html" rel="noopener">Confidentialité</a><a href="https://app.referee-tracker.fr/mentions-legales.html" rel="noopener">Mentions légales</a></nav>
-  <p>Un projet d’arbitres, pour les arbitres.</p>
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">REF CLIPS</strong> · © <span id="annee">2026</span> · <a href="https://www.referee-tracker.fr/">Referee Tracker</a>
+      <span class="legal">Projet indépendant d’un arbitre, sans lien avec les instances du basket. Captures d’écran : match fictif.</span></div>
+    <nav aria-label="Liens"><a href="https://www.referee-tracker.fr/">Referee Tracker</a><a href="https://app.referee-tracker.fr/mentions-legales.html">Mentions légales</a><a href="https://app.referee-tracker.fr/confidentialite.html">Confidentialité</a><a href="mailto:contact@referee-tracker.fr">Contact</a></nav>
+  </div>
 </footer>
-<script src="site.js?v=4"></script>
+<script src="rt.js?v=b76" defer></script>
+<script src="site.js?v=10" defer></script>
 </body>
 </html>
